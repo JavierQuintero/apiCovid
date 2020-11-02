@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/sty.css">
+	<link rel="stylesheet" href="css/target.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="titulo">
+		<h1>Covid en el mundo!</h1>
+	</div>
+	<!-- <div class="container">
+		<h2 >Colombia</h2>
+		<p >000000000</p>
+	</div>
+ -->
+<div class="contenCard">
+	<div class="card">
+        <div class="card__content">
+            <div class="card__front">
+                <h3 id="pais" class="card__title"></h3>
+				<h3>Total casos comfirmados</h3>
+                <p id="contenido" class="card__subtitle"></p>
+            </div>
+
+            <div class="card__back">
+                <ul class="card__body">
+                	<li>NewConfirmed: <span id="dNConfirm"></span></li>
+                	<li>TotalDeaths: <span id="dTDeaths"></span></li>
+                	<li>TotalRecovered: <span id="dTRecovered"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+</div>
+
+	<script>
+			//Render
+		let $pais = document.getElementById('pais'); 
+		let $contenido = document.getElementById('contenido');
+		let $dNConfirm =document.getElementById('dNConfirm');
+		let $dTDeaths =document.getElementById('dTDeaths');
+		let $dTRecovered =document.getElementById('dTRecovered');
+
+		function renderText(html, t){
+			html.textContent = t
+		}
+
+			//Peticion
+		fetch('https://api.covid19api.com/summary')
+		.then(covidData => covidData.json())
+		.then(pais => pais.Countries[36])//Colombia = 36
+		.then(data => {
+			debugger
+			renderText($pais, data.Country)
+			renderText($contenido, data.TotalConfirmed)
+			
+			renderText($dNConfirm, data.NewConfirmed)
+			renderText($dTDeaths, data.TotalDeaths)
+			renderText($dTRecovered, data.TotalRecovered)
+
+		})
+		.catch(e => console.log(e))
+	</script>
+</body>
+</html>
+
+<!-- 
+"Country": "Colombia",
+"CountryCode": "CO",
+"Slug": "colombia",
+"NewConfirmed": 8256,
+"TotalConfirmed": 974139,
+"NewDeaths": 170,
+"TotalDeaths": 29272,
+"NewRecovered": 8770,
+"TotalRecovered": 876731,
+"Date": "2020-10-21T12:34:57Z" -->
