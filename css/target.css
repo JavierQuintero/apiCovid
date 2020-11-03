@@ -19,7 +19,7 @@
     position: relative;
     transition: all 4s;
     transform-style: preserve-3d;
-    transform: rotateY(-1.08turn) rotateX(-1.02turn) rotateZ(0.019turn);
+    /* transform: rotateY(-1.08turn) rotateX(-1.02turn) rotateZ(0.019turn); */
 }
 .card__content h3,
 .card__content p{
@@ -78,12 +78,16 @@
     list-style: none;
     text-shadow: 0px 0px 1px #424242;
 }
+ul.card__body{
+    margin-inline-start: 5.8em;
+}
 .card__back{
     background: url("https://cdn.pixabay.com/photo/2020/04/28/15/35/coronavirus-5105109_960_720.png"),#009688e8;
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotateY(.5turn);
     height: 12em;
-    display: flex;
+    display: grid;
     align-items: center;
+    line-height: 2.5em;
 }

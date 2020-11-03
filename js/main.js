@@ -5,8 +5,9 @@ let $btn = document.getElementById('btnCode');
 $btn.addEventListener("click", () => {
 		
 		let numberPais = document.getElementById("numberPais").value;
-		console.log(numberPais);
-		if(numberPais>189){
+
+					
+		if(numberPais < 0 || numberPais > 189){
 			alert('No hay tantos paises datados!')
 		}
 
