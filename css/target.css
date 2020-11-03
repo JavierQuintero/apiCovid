@@ -1,11 +1,12 @@
 .container{
-	border: 1px solid rgba(0,0,0,0.3);
-	width: 350px;
-	display: grid;
+	width: 80%;
+    display: grid;
+    justify-content: center;
+    margin: auto;
 }
 
 .contenCard{
-    height: 100vh;
+    height: 75vh;
     display: grid;
     place-items: center;
 }
@@ -72,15 +73,15 @@
 }
 .card__body{
     transform: translateZ(2rem);
-    color: #800;
+    color: #247927;
     font-family: 'Fondamento', cursive;
     list-style: none;
-    text-shadow: 0 0 8px #fff;
+    text-shadow: 0px 0px 1px #424242;
 }
 .card__back{
-    background: url("https://ichef.bbci.co.uk/news/800/cpsprodpb/7602/production/_111301203_gettyimages-1204696189.jpg"),#009688e8;
+    background: url("https://cdn.pixabay.com/photo/2020/04/28/15/35/coronavirus-5105109_960_720.png"),#009688e8;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     transform: rotateY(.5turn);
     height: 12em;
     display: flex;
