@@ -4,9 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="https://www.flaticon.es/svg/static/icons/svg/2746/2746582.svg" type="image/x-icon">
+	<link rel="stylesheet" href="input.css">
 	<link rel="stylesheet" href="css/sty.css">
 	<link rel="stylesheet" href="css/target.css">
 	<title>Covid Mundial</title>
+	<script src="js/placeholder.js"></script>
 </head>
 <body>
 	<div class="titulo">
@@ -43,12 +45,31 @@
 
 	<!-- <script>
 
-fetch('https://api.covid19api.com/summary')
-	.then(covidData => covidData.json())
-	
-	
-	.catch(e => console.log(e));	
-
+		superplaceholder({
+			 el: document.querySelector('input'),
+			debugger
+			sentences: [ 'Something to show', 'Another thing to show'],
+			options: {
+				// delay between letters (in milliseconds)
+				letterDelay: 100, // milliseconds
+				// delay between sentences (in milliseconds)
+				sentenceDelay: 1000,
+				// should start on input focus. Set false to autostart
+				startOnFocus: true, // [DEPRECATED]
+				// loop through passed sentences
+				loop: false,
+				// Initially shuffle the passed sentences
+				shuffle: false,
+				// Show cursor or not. Shows by default
+				showCursor: true,
+				// String to show as cursor
+				cursor: '|',
+				// Control onFocus behaviour. Default is `superplaceholder.Actions.START`
+				onFocusAction: superplaceholder.Actions.[NOTHING|START|STOP]
+				// Control onBlur behaviour. Default is `superplaceholder.Actions.STOP`
+				onBlurAction: superplaceholder.Actions.[NOTHING|START|STOP]
+			}
+		});
 	</script> -->
 	
 <script src="js/main.js"></script>

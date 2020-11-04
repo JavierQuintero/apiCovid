@@ -81,6 +81,9 @@
 ul.card__body{
     margin-inline-start: 5.8em;
 }
+ul li{
+    color: #81C784;
+}
 .card__back{
     background: url("https://cdn.pixabay.com/photo/2020/04/28/15/35/coronavirus-5105109_960_720.png"),#009688e8;
     background-repeat: no-repeat;
