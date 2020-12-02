@@ -29,9 +29,9 @@ $btn.addEventListener("click", () => {
 		//Peticion
 	fetch('https://api.covid19api.com/summary')
 	.then(covidData => covidData.json())
-	.then(pais => pais.Countries[numberPais])//Colombia = 36
-	.then(data => {
+	.then(pais => pais.Countries[$numberPais])//Colombia = 36
 		
+	.then(data => {
 		renderText($pais, data.Country)
 		renderText($contenido, data.TotalConfirmed)
 		renderText($dNConfirm, data.NewConfirmed)
