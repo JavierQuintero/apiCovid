@@ -1,18 +1,26 @@
 // btn Peticion
 
 let $btn = document.getElementById('btnCode'); 
+let $nPais = document.querySelector('#numberPais');
 
-$btn.addEventListener("click", () => {
+	// Validacion tecla Enter
+  $nPais.addEventListener ('keypress',function(e){
+	validar(e);
+  })
+  let validar = (e) => {
+	let tecla = (document.all) ? e.keyCode : e.which;
+	if (tecla==13) llamarApi();
+  }
+
+const llamarApi = () => {
 		
-		let $num = document.getElementById("numberPais");
-		let $numberPais = $num.value;
+		let $numberPais = $nPais.value;
 
 					
-		if($numberPais < 0 
-		|| $numberPais > 189)
-		{
-			alert(`No hay ${$numberPais} paises datados! `)
-		}
+		if($numberPais < 0 	|| $numberPais > 189)
+			{
+				alert(`No hay ${$numberPais} paises datados! `)
+			}
 
 
 
@@ -42,4 +50,6 @@ $btn.addEventListener("click", () => {
 	})
 	.catch(e => console.log(e));	
 
-});
+};
+
+$btn.addEventListener("click", llamarApi);

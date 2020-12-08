@@ -14,10 +14,7 @@
 	<div class="titulo">
 		<h1>Covid en el mundo!</h1>
 	</div>
-		<!--<div class="container">
-				<h2 >Colombia</h2>
-				<p >000000000</p>
-			</div>-->
+
 	<div class="container">
 		<label for="numberPais">Codigo de Api,<br>(from 0 to 189)</label>
 		<input type="number" name="codigoApi" id="numberPais" placeholder="Ingresa codigo de pais"/>
@@ -28,15 +25,15 @@
         <div class="card__content">
             <div class="card__front">
                 <h3 id="pais" class="card__title"></h3>
-				<h3 class="textPermanent">Total casos comfirmados</h3>
+				<h3 class="textPermanent">Total casos Confirmados</h3>
                 <p id="contenido" class="card__subtitle"></p>
             </div>
 
             <div class="card__back">
                 <ul class="card__body">
-                	<li>NewConfirmed: <span id="dNConfirm"></span></li>
-                	<li>TotalDeaths: <span id="dTDeaths"></span></li>
-                	<li>TotalRecovered: <span id="dTRecovered"></span></li>
+                	<li>Nuevos casos confirmados: <span id="dNConfirm"></span></li>
+                	<li>Total Recuperados: <span id="dTRecovered"></span></li>
+                	<li>Total Fallecidos: <span id="dTDeaths"></span></li>
                 </ul>
             </div>
         </div>
@@ -73,6 +70,21 @@
 	</script> -->
 	
 <script src="js/main.js"></script>
+<!-- <script>
+	fetch("https://restcountries-v1.p.rapidapi.com/all", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "SIGN-UP-FOR-KEY",
+		"x-rapidapi-host": "restcountries-v1.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response.json());
+})
+.catch(err => {
+	console.error(err);
+});
+</script> -->
 </body>
 </html>
 
