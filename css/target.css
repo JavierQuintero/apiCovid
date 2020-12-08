@@ -17,7 +17,7 @@
 .card__content{
     text-align: center;
     position: relative;
-    transition: all 4s;
+    transition: all 1.3s ease-in-out;
     transform-style: preserve-3d;
     /* transform: rotateY(-1.08turn) rotateX(-1.02turn) rotateZ(0.019turn); */
 }
@@ -26,7 +26,7 @@
 	margin: 0;
 }
          .card:hover .card__content{
-            transform: rotateY(-.5turn);
+            transform: rotateY(-2.5turn);
             text-shadow: 0 0 3px black;
         } 
 
