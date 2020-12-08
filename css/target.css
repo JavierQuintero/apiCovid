@@ -66,6 +66,9 @@
 	#pais{
     	margin-top: 5%; 
     }
+    .textPermanent{
+        transform: translateZ(2em);
+    }
 .card__subtitle{
     transform: translateZ(4rem);
     font-variant: small-caps;
@@ -74,6 +77,9 @@
 .card__body{
     transform: translateZ(2rem);
     color: #247927;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
     font-family: 'Fondamento', cursive;
     list-style: none;
     text-shadow: 0px 0px 1px #424242;
@@ -82,15 +88,16 @@ ul.card__body{
     margin-inline-start: 5.8em;
 }
 ul li{
-    color: #81C784;
+    color: #3874F5;
 }
 .card__back{
-    background: url("https://cdn.pixabay.com/photo/2020/04/28/15/35/coronavirus-5105109_960_720.png"),#009688e8;
+    background: url("https://cdn.pixabay.com/photo/2020/04/28/15/35/coronavirus-5105109_960_720.png"), linear-gradient(45deg, #33D47B, #fff);
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotateY(.5turn);
-    height: 12em;
+    height: 10em;
     display: grid;
     align-items: center;
-    line-height: 2.5em;
+    text-align: left;
+    line-height: 1.5em;
 }
