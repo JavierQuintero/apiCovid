@@ -4,11 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="https://www.flaticon.es/svg/static/icons/svg/2746/2746582.svg" type="image/x-icon">
-	<link rel="stylesheet" href="input.css">
+	<link rel="stylesheet" href="css/input.css">
 	<link rel="stylesheet" href="css/sty.css">
 	<link rel="stylesheet" href="css/target.css">
 	<title>Covid Mundial</title>
 	<!-- <script src="js/placeholder.js"></script> -->
+	<style>
+		.container{
+			width: 40%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		
+	</style>
 </head>
 <body>
 	<div class="titulo">
@@ -16,10 +27,12 @@
 	</div>
 
 	<div class="container">
-		<label for="numberPais">Codigo de Api,<br>(from 0 to 189)</label>
-		<input type="number" name="codigoApi" id="numberPais" placeholder="Ingresa codigo de pais"/>
+		<label for="numberPais" class="label">Codigo de Api,<br>(from 0 to 189)</label>
+		<input type="number" name="codigoApi" id="numberPais" placeholder="Ingresa numero de lista de tu pais"/>		
 		<button id="btnCode">Enviar</button>
 	</div>
+
+
 <div class="contenCard">
 	<div class="card">
         <div class="card__content">

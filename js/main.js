@@ -2,7 +2,10 @@
 
 let $btn = document.getElementById('btnCode'); 
 let $nPais = document.querySelector('#numberPais');
-
+window.addEventListener('load', function(){
+	fetch('https://api.covid19api.com/summary')
+	.then(covidData => console.log(covidData.json()))
+})
 	// Validacion tecla Enter
   $nPais.addEventListener ('keypress',function(e){
 	validar(e);

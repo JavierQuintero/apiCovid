@@ -16,5 +16,6 @@ h1,h2,h3,h4{
 	text-align: center;
 	font-variant: small-caps;
 	height: 12%;
+	margin-bottom: 5%;
 	background: linear-gradient(45deg,#ccc,transparent); 
 }
